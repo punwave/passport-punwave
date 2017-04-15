@@ -1,9 +1,6 @@
-build/
-reports/
-
-# Node.js
-node_modules/
+node_modules
 npm-debug.log
-
-# Mac OS X
+lib
+coverage
+.nyc_output
 .DS_Store
