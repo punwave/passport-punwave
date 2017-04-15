@@ -1,41 +1,48 @@
 {
   "name": "passport-punwave",
-  "version": "1.0.0",
-  "description": "Punwave authentication strategy for Passport.",
-  "keywords": [
-    "passport",
-    "strategy"
-  ],
-  "author": {
-    "name": "Chun-Kai Wang",
-    "email": "chunkai1312@gmail.com"
+  "version": "0.1.0",
+  "description": "Punwave authentication strategy for Passport",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha test/**/*.test.js --require test/bootstrap/node.js",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "eslint lib test"
   },
+  "files": [
+    "index.js",
+    "lib"
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/punwave/passport-punwave.git"
+    "url": "git+https://github.com/punwave/passport-punwave.git"
   },
-  "bugs": {
-    "url": "http://github.com/punwave/passport-punwave/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
+  "keywords": [
+    "passport",
+    "punwave",
+    "oauth",
+    "oauth2",
+    "auth",
+    "authentication"
   ],
-  "main": "./lib",
+  "author": "Chun-Kai Wang <chunkai1312@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/punwave/passport-punwave/issues"
+  },
+  "homepage": "https://github.com/punwave/passport-punwave#readme",
   "dependencies": {
     "passport-oauth2": "1.x.x"
   },
   "devDependencies": {
-    "mocha": "1.x.x",
     "chai": "2.x.x",
-    "chai-passport-strategy": "1.x.x"
-  },
-  "engines": {
-    "node": ">= 0.4.0"
-  },
-  "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+    "chai-passport-strategy": "1.x.x",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "mocha": "1.x.x",
+    "nyc": "^10.2.0"
   }
 }
