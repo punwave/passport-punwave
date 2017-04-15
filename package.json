@@ -1,0 +1,41 @@
+{
+  "name": "passport-punwave",
+  "version": "1.0.0",
+  "description": "Punwave authentication strategy for Passport.",
+  "keywords": [
+    "passport",
+    "strategy"
+  ],
+  "author": {
+    "name": "Chun-Kai Wang",
+    "email": "chunkai1312@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/punwave/passport-punwave.git"
+  },
+  "bugs": {
+    "url": "http://github.com/punwave/passport-punwave/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "passport-oauth2": "1.x.x"
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "chai": "2.x.x",
+    "chai-passport-strategy": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  }
+}
