@@ -1,15 +1,12 @@
 language: "node_js"
 node_js:
-  - "0.10"
-  - "0.8"
-#  - "0.6"
-  - "0.4"
-
-before_install:
- - "npm install istanbul -g"
- - "npm install coveralls -g"
-
-script: "make ci-travis"
-
+  - "7"
+  - "6"
+  - "5"
+  - "4"
+install:
+  - npm install
+script:
+  - npm test
 after_success:
-  - "make submit-cov-to-coveralls"
+  - npm run coverage
