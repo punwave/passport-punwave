@@ -1,12 +1,10 @@
 # passport-punwave
 
-[![Build](https://img.shields.io/travis/punwave/passport-punwave.svg)](https://travis-ci.org/punwave/passport-punwave)
-[![Coverage](https://img.shields.io/coveralls/punwave/passport-punwave.svg)](https://coveralls.io/r/punwave/passport-punwave)
-[![Quality](https://img.shields.io/codeclimate/github/punwave/passport-punwave.svg?label=quality)](https://codeclimate.com/github/punwave/passport-punwave)
-[![Dependencies](https://img.shields.io/david/punwave/passport-punwave.svg)](https://david-dm.org/punwave/passport-punwave)
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][codecov-image]][codecov-url]
 
-
-[Passport](http://passportjs.org/) strategy for authenticating with Punwave using the OAuth 2.0 API.
+> [Passport](http://passportjs.org/) strategy for authenticating with Punwave using the OAuth 2.0 API.
 
 This module lets you authenticate using Punwave in your Node.js applications.
 By plugging into Passport, Punwave authentication can be easily and
@@ -16,11 +14,13 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 
-    $ npm install passport-punwave
+```
+$ npm install passport-punwave
+```
 
 ## Usage
 
-#### Configure Strategy
+### Configure Strategy
 
 The Punwave authentication strategy authenticates users using a Punwave
 account and OAuth 2.0 tokens.  The app ID and secret obtained when creating an
@@ -44,7 +44,7 @@ passport.use(new PunwaveStrategy({
 ));
 ```
 
-#### Authenticate Requests
+### Authenticate Requests
 
 Use `passport.authenticate()`, specifying the `'punwave'` strategy, to
 authenticate requests.
@@ -67,3 +67,10 @@ app.get('/auth/punwave/callback',
 ## License
 
 MIT
+
+[npm-image]: https://img.shields.io/npm/v/passport-punwave.svg
+[npm-url]: https://npmjs.org/package/passport-punwave
+[travis-image]: https://img.shields.io/travis/punwave/passport-punwave.svg
+[travis-url]: https://travis-ci.org/punwave/passport-punwave
+[codecov-image]: https://img.shields.io/codecov/c/github/punwave/passport-punwave.svg
+[codecov-url]: https://codecov.io/gh/punwave/passport-punwave
