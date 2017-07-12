@@ -10,7 +10,7 @@ describe('Strategy#userProfile', function () {
     }, function () {})
 
     strategy._oauth2.get = function (url, accessToken, callback) {
-      if (url !== 'https://api.punwave.com/campaign/v2/users/me') return callback(new Error('incorrect url argument'))
+      if (url !== 'https://api.punwave.com/oauth2/users/me') return callback(new Error('incorrect url argument'))
       if (accessToken !== 'token') return callback(new Error('incorrect token argument'))
 
       var body = '{"firstName":"Kevin","lastName":"Wang","email":"chunkai1312@gmail.com","name":"Kevin Wang","id":"574c19165a9aec772be70108"}'

@@ -43,7 +43,7 @@ describe('Strategy', function () {
     })
 
     it('should be redirected', function () {
-      expect(url).to.equal('https://api.punwave.com/oauth/authorize?response_type=code&client_id=ABC123')
+      expect(url).to.equal('https://api.punwave.com/oauth2/authorize?response_type=code&client_id=ABC123')
     })
   })
 
